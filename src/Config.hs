@@ -1,7 +1,9 @@
 {-# LANGUAGE OverloadedStrings #-}
 {-# LANGUAGE RecordWildCards #-}
 
-module Config where
+module Config
+( parseTrinketConfig
+) where
 
 import Data.Aeson
 import Data.Text
@@ -21,5 +23,5 @@ instance FromJSON TrinketConfig where
       onUse <- o .:? "onUse" .!= False
       return TrinketConfig{..}
 
-parseConfig :: B.ByteString -> Either String [TrinketConfig]
-parseConfig b = eitherDecode b :: (Either String [TrinketConfig])
+parseTrinketConfig :: B.ByteString -> Either String [TrinketConfig]
+parseTrinketConfig b = eitherDecode b :: (Either String [TrinketConfig])
