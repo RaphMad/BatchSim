@@ -10,12 +10,12 @@
     {
         "id": 128705,
         "name": "Darkmoon Deck: Dominion",
-        "iLevels": [850]
+        "iLvls": [850]
     },
     {
         "id": 136152,
         "name": "PvP Str / Versa on use",
-        "iLevels": [850, 860],
+        "iLvls": [850, 860],
         "onUse": true
     }
 ]

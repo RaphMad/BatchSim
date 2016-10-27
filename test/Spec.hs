@@ -1,13 +1,10 @@
 module Main where
 
 import Test.Hspec
-import BatchSim
+import Config
 
 main :: IO ()
-main = hspec $ describe "primes" $ do
+main = hspec $ describe "Config" $ do
 
-   it "should return the correct primes" $
-      take 5 primes `shouldBe` [2, 3, 5, 7, 11]
-
-   it "should fail with incorrect primes" $
-      take 5 primes `shouldBe` [1, 1, 1, 1, 1]
+   it "dummyTest" $
+      take 5 [2, 3, 5, 7, 11] `shouldBe` [2, 3, 5, 7, 11]

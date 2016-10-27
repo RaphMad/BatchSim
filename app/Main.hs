@@ -1,6 +1,11 @@
 module Main where
 
-import BatchSim
+import Config
+import qualified Data.ByteString.Lazy as B
 
 main :: IO ()
-main = print $ take 10 primes
+main = do
+   file <- B.readFile "trinkets.json"
+   case parseConfig file of
+      Left error -> putStrLn error
+      Right config -> print config
